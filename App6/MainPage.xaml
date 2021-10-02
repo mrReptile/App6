@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App6.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <StackLayout>
+        <Frame
+            Padding="24"
+            BackgroundColor="#2196F3"
+            CornerRadius="0">
+            <Label
+                FontSize="40"
+                HorizontalTextAlignment="Center"
+                Text="Inicio de sesión"
+                TextColor="White" />
+        </Frame>
+
+        <Entry
+            Margin="10"
+            Placeholder="Correo electronico o usuario"
+            Text="{Binding Nombre}" />
+        <Entry
+            Margin="10"
+            IsPassword="True"
+            Placeholder="Contraseña"
+            Text="{Binding Contra}" />
+
+        <Button
+            Margin="50"
+            Command="{Binding GoViewTwo}"
+            Text="Iniciar sesión" />
+
+        <Label
+            IsVisible="{Binding IsErrorLogIn}"
+            Text="Usuario o contrasena incorrectos"
+            TextColor="Red" />
+
+    </StackLayout>
+
+</ContentPage>
